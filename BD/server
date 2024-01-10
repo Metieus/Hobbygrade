@@ -1,0 +1,43 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+const app = express();
+const port = 3000;
+
+// Conectar ao banco de dados MongoDB
+mongoose.connect('mongodb://localhost:27017/server', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+// Definir o esquema do usuário
+const userSchema = new mongoose.Schema({
+  fullName: String,
+  email: String,
+  password: String,
+});
+
+const User = mongoose.model('User', userSchema);
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Rota para cadastro de usuário
+app.post('/cadastro', async (req, res) => {
+  try {
+    const newUser = new User({
+      fullName: req.body.fullName,
+      email: req.body.email,
+      password: req.body.password,
+    });
+    await newUser.save();
+    res.status(201).send('Usuário cadastrado com sucesso!');
+  } catch (error) {
+    res.status(400).send('Erro ao cadastrar usuário');
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${8080}`);
+});

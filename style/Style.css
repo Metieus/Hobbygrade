@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../img/fundo.png');
+}
+
+.container {
+  width: 400px;
+  background-color: #e7e7e7e4;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
+  padding: 20px;
+}
+
+.logo h1 {
+  text-align: left;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.login-form {
+  text-align: center;
+}
+
+input[type="email"],
+input[type="password"],
+button {
+  
+  display: block;
+  width: 85%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.options {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+
+  margin-left: -1110px;
+  font-size: 500%;
+}
+
+.animated-text {
+  opacity: 0; 
+  animation: aparecer 5s forwards;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0; 
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
