@@ -1,42 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/pages/home.css">
-    <link rel="stylesheet" href="./assets/styles/animation/homeAnimations.css">
-    <title>Teste mettieus</title>
+    <title>Menu Suspenso</title>
+    <link rel="stylesheet" href="./style/home.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
-
 <body>
-    <aside id="sidebar" class="sidebar-activate">
-        <header class="sidebar-header">
-            <button class="header-button">
-                <img src="./assets/img/laboral.webp" alt="">
-            </button>
-        </header>
-        <div class="container-list">
-            <ul class="sidebar-buttons-list">
-                <li>
-                    BTN 1
-                </li>
-                <li>
-                    BTN 2
-                </li>
-                <li>
-                    BTN 3
-                </li>
-                <li>
-                    BTN 4
-                </li>
-            </ul>
-        </div>
-    </aside>
-    <section class="meu-conteudo">
-        colocar funcionalidade da minha pagina
-    </section>
-    <script src="./assets//js/home.js"></script>
-</body>
+    <nav class="menu-lateral">
 
+        <div class="btn-expandir">
+            <i class="bi bi-list"></i>
+        </div>
+
+        <ul>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-house"></i></span> <!-- guardar icones  no menu  -->
+                    <span class="text-link">Home</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-columns-gap"></i></span> <!-- guardar icones  no menu  -->
+                    <span class="text-link">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-floppy"></i></span> <!-- guardar="icon"es  no menu  -->
+                    <span class="text-link">Salvar</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-folder"></i></span> <!-- guardar="icon"es  no menu  -->
+                    <span class="text-link">Pasta</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-gear"></i></span> <!-- guardar="icon"es  no menu  -->
+                    <span class="text-link">Configurações</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-peace"></i></span> <!-- guardar icones  no menu  -->
+                    <span class="text-link">Paz</span>
+                </a>
+            </li>
+
+
+
+        </ul>
+
+    </nav>
+</body>
 </html>
